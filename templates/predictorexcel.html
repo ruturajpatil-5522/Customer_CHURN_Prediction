@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Churn Prediction</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+             background-image: url('../static/assets/img/Imag_bg.jpg'); /* Add your image URL here */
+        
+            background-color: #37517e;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 450px; /* Reduced max-width to fit better */
+            padding: 15px; /* Reduced padding */
+            box-sizing: border-box;
+            background-color: #f5f5f5;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            animation: slide-down 0.5s ease-in-out forwards;
+        }
+        h1 {
+            color: #375e97;
+            text-align: center;
+            margin-bottom: 20px; /* Reduced margin-bottom */
+            font-size: 24px; /* Adjusted font size */
+        }
+        .info-message {
+            background-color: #e7f3fe;
+            border-left: 6px solid #2196F3;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="file"],
+        select {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 5px;
+        }
+        .form-group {
+            margin-bottom: 15px; /* Reduced margin-bottom */
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .input-container {
+            display: flex;
+            align-items: center;
+        }
+        .input-container label {
+            flex: 1;
+            margin-right: 10px;
+        }
+        .input-container input,
+        .input-container select {
+            flex: 2;
+        }
+        .predict-button {
+            text-align: center;
+        }
+        .custom-background {
+            background: #ddd;
+            border: none;
+            color: #37517e;
+        }
+        .custom-background:hover {
+            background: #47b2e4;
+        }
+        .prediction-text {
+            margin-top: 20px;
+            font-size: 20px;
+            text-align: center;
+            color: #6c757d;
+            animation: slide-down 0.5s ease-in-out forwards;
+        }
+        @keyframes slide-down {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h1>Customer Churn Prediction</h1>
+                <div class="info-message">
+                    <p><strong>Note:</strong> The CSV file should have the following columns with appropriate data types:</p>
+                    <ul>
+                        <li><strong>contract</strong> (str): Type of contract (e.g., Month-to-month, One year, Two year)</li>
+                        <li><strong>onlinesecurity</strong> (str): Online security status (e.g., Yes, No)</li>
+                        <li><strong>techsupport</strong> (str): Technical support status (e.g., Yes, No)</li>
+                        <li><strong>internetservice</strong> (str): Type of internet service (e.g., DSL, Fiber optic, No)</li>
+                        <li><strong>onlinebackup</strong> (str): Online backup status (e.g., Yes, No)</li>
+                        <li><strong>tenure</strong> (int): Number of months the customer has stayed with the company</li>
+                        <li><strong>monthlycharges</strong> (float): Monthly charges</li>
+                        <li><strong>totalcharges</strong> (float): Total charges</li>
+                    </ul>
+                </div>
+                <form action="/predict_excel" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="file">Upload CSV file:</label>
+                        <input type="file" id="file" name="file" class="form-control" required>
+                    </div>
+                    <div class="predict-button">
+                        <button type="submit" class="btn btn-primary btn-lg custom-background">Predict </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

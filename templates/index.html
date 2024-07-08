@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Customer Churn Customer </title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{ url_for('static', filename='assets/img/favicon.png') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/img/apple-touch-icon.png') }}" rel="stylesheet">
+  
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static', filename='assets/vendor/aos/aos.css') }}" rel="stylesheet">
+   <link href="{{ url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+   <link href="{{ url_for('static', filename='assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+   <link href="{{ url_for('static', filename='assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+   <link href="{{ url_for('static', filename='assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+   <link href="{{ url_for('static', filename='assets/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
+   <link href="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+   <link href="{{ url_for('static', filename='assets/css/style.css') }}" rel="stylesheet">
+  
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="index.html">Churn Predictor</a></h1>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="/index">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
+          data-aos="fade-up" data-aos-delay="200">
+          <h1>Customer Churn Prediction</h1>
+          <h2>Here you can predict customer churn by providing necessary information.</h2>
+          <div class="d-flex justify-content-center justify-content-lg-start">
+            <a href="/form" class="btn btn-primary btn-lg custom-margin custom-background">Predict Customer Churned</a>
+
+            <a href="/predictorexcel" class="btn btn-primary btn-lg custom-background">Churn Predictor Of Excel file </a>
+
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+  <img src="{{ url_for('static', filename='assets/img/hero-img.png') }}" class="img-fluid animated" alt="">
+</div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+
+    <!-- ======= About Us Section ======= -->
+   <section id="about" class="about">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>About Us</h2>
+    </div>
+    <div class="row content">
+      <div class="col-lg-6">
+        <p>
+          Our Customer Churn Prediction application helps businesses forecast whether their customers are likely to leave the company. By utilizing machine learning algorithms, we provide insights into customer behavior, enabling companies to take proactive measures to retain customers.
+        </p>
+        <ul>
+          <li><i class="ri-check-double-line"></i> Predict churn probability with high accuracy</li>
+          <li><i class="ri-check-double-line"></i> Identify key factors influencing customer retention</li>
+          <li><i class="ri-check-double-line"></i> Provide actionable recommendations for reducing churn</li>
+        </ul>
+      </div>
+      <div class="col-lg-6 pt-4 pt-lg-0">
+        <p>
+          Our team is dedicated to delivering cutting-edge solutions that empower businesses to thrive in a competitive market. With a focus on innovation and customer satisfaction, we strive to make a positive impact on our clients' success.
+        </p>
+        <a href="/form" class="btn-learn-more">Try Our Prediction Tool</a>
+      </div>
+    </div>
+  </div>
+</section><!-- End About Us Section -->
+
+    <!-- ======= Services Section ======= -->
+<section id="services" class="services section-bg">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Services</h2>
+      <p>Our Customer Churn Prediction application offers the following services to help businesses optimize customer retention and reduce churn:</p>
+    </div>
+
+    <div class="row">
+      <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+        <div class="icon-box">
+          <div class="icon"><i class="bx bxl-dribbble"></i></div>
+          <h4><a href="">Churn Probability Prediction</a></h4>
+          <p>Predict the likelihood of customer churn based on historical data and machine learning algorithms.</p>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
+        data-aos-delay="200">
+        <div class="icon-box">
+          <div class="icon"><i class="bx bx-file"></i></div>
+          <h4><a href="">Key Factors Identification</a></h4>
+          <p>Analyze key factors influencing churn, such as contract type, internet service, and monthly charges.</p>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
+        data-aos-delay="300">
+        <div class="icon-box">
+          <div class="icon"><i class="bx bx-tachometer"></i></div>
+          <h4><a href="">Actionable Insights</a></h4>
+          <p>Receive actionable recommendations to improve customer retention and enhance business performance.</p>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
+        data-aos-delay="400">
+        <div class="icon-box">
+          <div class="icon"><i class="bx bx-layer"></i></div>
+          <h4><a href="">Customized Solutions</a></h4>
+          <p>Get tailor-made solutions designed to meet the specific needs and challenges of your business.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======= Team Section ======= -->
+<section id="team" class="team section-bg">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Team</h2>
+      <p>Meet our talented team members who contributed to the development of this website:</p>
+    </div>
+
+    <div class="row">
+
+      <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="member d-flex align-items-start">
+          <div class="pic"><img src="assets/img/team/shantanu.jpg" class="img-fluid" alt=""></div>
+          <div class="member-info">
+            <h4>Shantanu Pawar</h4>
+            <span>Full Stack Web Developer</span>
+            <p>Shantanu is our skilled Full Stack Web Developer who contributed to both front-end and back-end development with his expertise.</p>
+            <div class="social">
+              <a href="#"><i class="ri-twitter-fill"></i></a>
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+              <a href="#"><i class="ri-instagram-fill"></i></a>
+              <a href="#"> <i class="ri-linkedin-box-fill"></i> </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="200">
+        <div class="member d-flex align-items-start">
+          <div class="pic"><img src="assets/img/team/ruturaj.jpg" class="img-fluid" alt=""></div>
+          <div class="member-info">
+            <h4>Ruturaj Patil</h4>
+            <span>Machine Learning Engineer</span>
+            <p>Ruturaj is our Machine Learning expert who implemented intelligent features using advanced algorithms and models.</p>
+            <div class="social">
+              <a href="#"><i class="ri-twitter-fill"></i></a>
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+              <a href="#"><i class="ri-instagram-fill"></i></a>
+              <a href="#"> <i class="ri-linkedin-box-fill"></i> </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+        <div class="member d-flex align-items-start">
+          <div class="pic"><img src="assets/img/team/nagesh.jpg" class="img-fluid" alt=""></div>
+          <div class="member-info">
+            <h4>Nagesh Pujari</h4>
+            <span>UX/UI Designer</span>
+            <p>Nagesh is our creative UX/UI Designer who crafted the user experience and interface to ensure an intuitive browsing experience.</p>
+            <div class="social">
+              <a href="#"><i class="ri-twitter-fill"></i></a>
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+              <a href="#"><i class="ri-instagram-fill"></i></a>
+              <a href="#"> <i class="ri-linkedin-box-fill"></i> </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section><!-- End Team Section -->
+
+  <!-- ======= Frequently Asked Questions Section ======= -->
+<section id="faq" class="faq section-bg">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Frequently Asked Questions</h2>
+      <p>Here are some common questions about our website and the machine learning model we developed:</p>
+    </div>
+
+    <div class="faq-list">
+      <ul>
+        <li data-aos="fade-up" data-aos-delay="100">
+          <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse"
+            data-bs-target="#faq-list-1">What technologies were used to develop this website? <i
+              class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+          <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+            <p>
+              We used a combination of HTML, CSS, JavaScript, and the Bootstrap framework for front-end development. For the back end, we utilized technologies like Node.js and Express.js.
+            </p>
+          </div>
+        </li>
+
+        <li data-aos="fade-up" data-aos-delay="200">
+          <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2"
+            class="collapsed">Can you explain the role of machine learning in this project? <i
+              class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+          <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+            <p>
+              The machine learning model in our project is responsible for analyzing user behavior and preferences to provide personalized recommendations and enhance the user experience.
+            </p>
+          </div>
+        </li>
+
+        <li data-aos="fade-up" data-aos-delay="300">
+          <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3"
+            class="collapsed">How was the UX/UI design approach for this website? <i
+              class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+          <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+            <p>
+              Our UX/UI design focused on creating a seamless and intuitive browsing experience for users, ensuring easy navigation and accessibility of information.
+            </p>
+          </div>
+        </li>
+
+        <!-- Add more FAQs as needed -->
+
+      </ul>
+    </div>
+
+  </div>
+</section><!-- End Frequently Asked Questions Section -->
+
+
+    
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Shantanu Pawar</h3>
+            <p>
+              Pune <br>
+              Maharashtra<br>
+              India <br><br>
+              <strong>Phone:</strong> +91 8459 9132 92<br>
+              <strong>Email:</strong> pawarshantanu58@gmail.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+            <p>Contact here:</p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Shantanu Pawar</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer>
+
+  <div id="preloader"></div>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="{{ url_for('static', filename='assets/vendor/aos/aos.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/vendor/waypoints/noframework.waypoints.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/vendor/php-email-form/validate.js') }}"></script>
+
+<!-- Template Main JS File -->
+<script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+</body>
+
+</html>
