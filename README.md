@@ -30,8 +30,4 @@ To run the project locally, follow these steps:
 - NumPy: Numerical computing library.
 - Scikit-learn: Machine learning toolkit for model training and evaluation.
 
-## Contributors
-- [Shantanu Pawar](https://customer-churn-prediction-z2di.onrender.com/)
 
-## License
-This project is licensed under the [MIT License](LICENSE).
